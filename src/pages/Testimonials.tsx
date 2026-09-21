@@ -1,5 +1,5 @@
-import { REVIEWS } from "../data/site"
-import { ArrowIcon, PageHero } from "../components/ui"
+import { GALLERY, REVIEWS } from "../data/site"
+import { ArrowIcon, Eyebrow, PageHero } from "../components/ui"
 
 export default function Testimonials() {
   return (
@@ -45,8 +45,34 @@ export default function Testimonials() {
             </article>
           ))}
         </div>
+      </section>
 
-        <div className="mt-14 flex flex-col items-start gap-5 rounded-2xl bg-navy p-8 text-white md:flex-row md:items-center md:justify-between md:p-10">
+      <section className="bg-shell py-20 md:py-24">
+        <div className="mx-auto max-w-7xl px-5 md:px-8">
+          <Eyebrow>Recent Closings</Eyebrow>
+          <h2 className="max-w-2xl text-3xl font-semibold leading-tight tracking-tight sm:text-4xl">
+            Moments from our clients&apos; journeys
+          </h2>
+
+          <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {GALLERY.map((photo) => (
+              <div
+                key={photo.alt}
+                className="aspect-square overflow-hidden rounded-2xl border border-navy/10"
+              >
+                <img
+                  src={photo.src}
+                  alt={photo.alt}
+                  className="h-full w-full object-cover"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-4xl px-5 py-20 md:px-8 md:py-28">
+        <div className="flex flex-col items-start gap-5 rounded-2xl bg-navy p-8 text-white md:flex-row md:items-center md:justify-between md:p-10">
           <p className="max-w-md text-xl font-semibold leading-snug tracking-tight">
             Ready to start your own Detroit success story?
           </p>

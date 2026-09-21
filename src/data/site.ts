@@ -8,6 +8,13 @@ import antoinePortrait from "../assets/people/antoine-hayes.jpg"
 import cristinaPortrait from "../assets/people/cristina-pavloff.jpg"
 import moePortrait from "../assets/people/moe-lucas.jpg"
 import roddPortrait from "../assets/people/rodd-phillips.jpg"
+import clientTeamKitchen from "../assets/photos/client-team-kitchen.jpg"
+import closingDayDevonTitle from "../assets/photos/closing-day-devon-title.jpg"
+import clientsPorchSelfie from "../assets/photos/clients-porch-selfie.jpg"
+import newHomeownersPorch from "../assets/photos/new-homeowners-porch.jpg"
+import closingTableFamily from "../assets/photos/closing-table-family.jpg"
+import kwroHolidayGathering from "../assets/photos/kwro-holiday-gathering.jpg"
+import veteransVillage from "../assets/photos/veterans-village.jpg"
 
 export const CONTACT = {
   phone: "+1 (248) 419-1004",
@@ -104,6 +111,16 @@ export const REVIEWS = [
       "From the moment we connected, Antoine has been an invaluable asset, providing the expertise, reliability, and dedication needed to bring my projects in Detroit to fruition. His integrity and commitment to excellence have not only restored my confidence but have also made him someone I wholeheartedly trust as both a businessman and a business partner. I truly appreciate his unwavering support and highly recommend him to anyone seeking a professional they can depend on.",
     ],
   },
+]
+
+export const GALLERY = [
+  { src: newHomeownersPorch, alt: "New homeowners celebrating on the porch of their renovated Detroit home" },
+  { src: closingDayDevonTitle, alt: "Clients celebrating on closing day at Devon Title" },
+  { src: closingTableFamily, alt: "A family at the closing table signing on their new home" },
+  { src: clientTeamKitchen, alt: "Antoine and clients in the kitchen of a newly renovated home" },
+  { src: clientsPorchSelfie, alt: "Antoine and clients taking a selfie together" },
+  { src: veteransVillage, alt: "Antoine presenting the Benjamin O. Davis Veterans Village development plans" },
+  { src: kwroHolidayGathering, alt: "The Elite Urban team at a holiday gathering" },
 ]
 
 export const TEAM = [

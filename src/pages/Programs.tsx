@@ -1,5 +1,6 @@
 import { PURCHASE_STEPS } from "../data/site"
 import { ArrowIcon, Eyebrow, PageHero } from "../components/ui"
+import eliteHomebuyer from "../assets/photos/elite-homebuyer.jpg"
 
 export default function Programs() {
   return (
@@ -13,6 +14,16 @@ export default function Programs() {
         }
         lead="Start your journey feeling confident and prepared. From creating a budget to signing your name on the dotted line, here's what you need to know about the home-buying process."
       />
+
+      <section className="mx-auto max-w-7xl px-5 pt-16 md:px-8 md:pt-20">
+        <div className="aspect-[16/9] w-full overflow-hidden rounded-2xl border border-navy/10">
+          <img
+            src={eliteHomebuyer}
+            alt="A family relaxing together in the living room of their new Detroit home"
+            className="h-full w-full object-cover"
+          />
+        </div>
+      </section>
 
       <section className="mx-auto max-w-7xl px-5 py-20 md:px-8 md:py-28">
         <Eyebrow>Purchase Process</Eyebrow>
