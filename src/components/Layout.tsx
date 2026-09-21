@@ -75,13 +75,13 @@ function Header() {
         </nav>
 
         <div className="flex items-center gap-3">
-          <a
-            href="#contact"
+          <Link
+            to="/contact"
             className="hidden items-center gap-2 rounded-full bg-navy px-5 py-2.5 text-sm font-semibold text-white transition-transform hover:-translate-y-0.5 sm:inline-flex"
           >
             Let's Talk
             <ArrowIcon />
-          </a>
+          </Link>
           <button
             type="button"
             onClick={() => setMenuOpen((v) => !v)}
@@ -125,14 +125,14 @@ function Header() {
               ))}
             </div>
           ))}
-          <a
-            href="#contact"
+          <Link
+            to="/contact"
             onClick={closeMenu}
             className="mt-4 flex items-center justify-center gap-2 rounded-full bg-navy px-5 py-3 text-sm font-semibold text-white"
           >
             Let's Talk
             <ArrowIcon />
-          </a>
+          </Link>
         </nav>
       )}
     </header>

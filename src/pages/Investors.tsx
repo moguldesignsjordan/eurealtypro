@@ -1,5 +1,7 @@
 import { useState } from "react"
+import { Link } from "react-router-dom"
 import { INVESTOR_DISCLAIMER, INVESTOR_FAQS, INVESTOR_TIERS } from "../data/site"
+import eliteInvestor from "../assets/photos/elite-investor.jpg"
 import { ArrowIcon, Eyebrow, PageHero } from "../components/ui"
 
 function Faq({ q, a }: { q: string; a: string }) {
@@ -44,6 +46,16 @@ export default function Investors() {
         lead="At Elite Urban Realty Professionals, we offer unique opportunities for two distinct types of investors to participate in transforming Detroit's urban landscape."
       />
 
+      <section className="mx-auto max-w-7xl px-5 pt-16 md:px-8 md:pt-20">
+        <div className="aspect-[16/9] w-full overflow-hidden rounded-2xl border border-navy/10">
+          <img
+            src={eliteInvestor}
+            alt="Elite Urban Realty Professionals reviewing plans at a new-construction site with the development team"
+            className="h-full w-full object-cover"
+          />
+        </div>
+      </section>
+
       <section className="mx-auto max-w-7xl px-5 py-20 md:px-8 md:py-28">
         <div className="grid gap-6 lg:grid-cols-2">
           {INVESTOR_TIERS.map((tier, i) => (
@@ -86,15 +98,15 @@ export default function Investors() {
                 ))}
               </dl>
 
-              <a
-                href="#contact"
+              <Link
+                to="/contact"
                 className={`mt-9 inline-flex items-center justify-center gap-2 rounded-full px-7 py-3.5 text-sm font-semibold transition-transform hover:-translate-y-0.5 ${
                   i === 0 ? "bg-lime text-navy" : "bg-navy text-white"
                 }`}
               >
                 Schedule Consultation
                 <ArrowIcon />
-              </a>
+              </Link>
             </article>
           ))}
         </div>

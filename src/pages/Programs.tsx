@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import { PURCHASE_STEPS } from "../data/site"
 import { ArrowIcon, Eyebrow, PageHero } from "../components/ui"
 import eliteHomebuyer from "../assets/photos/elite-homebuyer.jpg"
@@ -63,13 +64,13 @@ export default function Programs() {
                 </p>
               </div>
               <div className="md:justify-self-end">
-                <a
-                  href="#contact"
+                <Link
+                  to="/contact"
                   className="inline-flex items-center gap-2 rounded-full bg-lime px-7 py-3.5 text-sm font-semibold text-navy transition-transform hover:-translate-y-0.5"
                 >
                   Get Started
                   <ArrowIcon />
-                </a>
+                </Link>
               </div>
             </div>
           </div>

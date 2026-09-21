@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import { GALLERY, REVIEWS } from "../data/site"
 import { ArrowIcon, Eyebrow, PageHero } from "../components/ui"
 
@@ -76,13 +77,13 @@ export default function Testimonials() {
           <p className="max-w-md text-xl font-semibold leading-snug tracking-tight">
             Ready to start your own Detroit success story?
           </p>
-          <a
-            href="#contact"
+          <Link
+            to="/contact"
             className="inline-flex shrink-0 items-center gap-2 rounded-full bg-lime px-7 py-3.5 text-sm font-semibold text-navy transition-transform hover:-translate-y-0.5"
           >
             Book Consultation
             <ArrowIcon />
-          </a>
+          </Link>
         </div>
       </section>
     </>

@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { Link } from "react-router-dom"
 import { CONTACT, PARTNERS, STATS, TESTIMONIAL_EXCERPTS } from "../data/site"
-import heroHome from "../assets/photos/detroit-home.jpg"
+import heroHome from "../assets/photos/development-hero.jpg"
 import { ArrowIcon, Eyebrow } from "../components/ui"
 
 function QuoteIcon() {
@@ -153,13 +153,13 @@ export default function Home() {
               transformation of real estate acquisition and community development.
             </p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
-              <a
-                href="#contact"
+              <Link
+                to="/contact"
                 className="inline-flex items-center justify-center gap-2 rounded-full bg-lime px-7 py-3.5 text-sm font-semibold text-navy transition-transform hover:-translate-y-0.5"
               >
                 Get Started
                 <ArrowIcon />
-              </a>
+              </Link>
               <Link
                 to="/about-us"
                 className="inline-flex items-center justify-center gap-2 rounded-full border border-white/25 px-7 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-white/10"
@@ -186,20 +186,9 @@ export default function Home() {
             <div className="aspect-[4/5] w-full overflow-hidden rounded-2xl border border-white/10">
               <img
                 src={heroHome}
-                alt="A restored brick home in a Detroit neighborhood"
+                alt="A renovated tudor-style home at twilight"
                 className="h-full w-full object-cover"
               />
-            </div>
-            <div className="absolute -bottom-8 -left-8 hidden w-60 rounded-xl border border-navy/10 bg-white p-5 shadow-xl lg:block">
-              <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-navy/50">
-                Serving
-              </p>
-              <p className="mt-1.5 text-lg font-semibold tracking-tight text-navy">
-                Detroit &amp; Metro MI
-              </p>
-              <p className="mt-1 text-sm leading-snug text-navy/60">
-                Buyers, sellers, agents, and investors.
-              </p>
             </div>
           </div>
         </div>
@@ -316,13 +305,13 @@ export default function Home() {
               here to help. Let us guide you with trusted expertise, local knowledge, and a
               commitment to your success.
             </p>
-            <a
-              href="#contact"
+            <Link
+              to="/contact"
               className="mt-8 inline-flex items-center gap-2 rounded-full bg-lime px-7 py-3.5 text-sm font-semibold text-navy transition-transform hover:-translate-y-0.5"
             >
               Book Consultation
               <ArrowIcon />
-            </a>
+            </Link>
           </div>
 
           <dl className="grid gap-4 sm:grid-cols-2 lg:grid-cols-1">

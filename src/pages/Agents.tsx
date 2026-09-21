@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import { TEAM } from "../data/site"
 import { ArrowIcon, PageHero } from "../components/ui"
 
@@ -37,13 +38,13 @@ export default function Agents() {
           <p className="max-w-lg text-xl font-semibold leading-snug tracking-tight">
             Want to work with our team?
           </p>
-          <a
-            href="#contact"
+          <Link
+            to="/contact"
             className="inline-flex shrink-0 items-center gap-2 rounded-full bg-lime px-7 py-3.5 text-sm font-semibold text-navy transition-transform hover:-translate-y-0.5"
           >
             Let's Talk
             <ArrowIcon />
-          </a>
+          </Link>
         </div>
       </section>
     </>
