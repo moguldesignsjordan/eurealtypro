@@ -15,27 +15,135 @@ function QuoteIcon() {
   )
 }
 
+const NEIGHBORHOOD_LOTS = [
+  { x: 70, y: 96, w: 46, h: 32 },
+  { x: 70, y: 134, w: 46, h: 32 },
+  { x: 70, y: 172, w: 46, h: 32 },
+  { x: 122, y: 96, w: 46, h: 32 },
+  { x: 122, y: 134, w: 46, h: 32 },
+  { x: 122, y: 172, w: 46, h: 32 },
+  { x: 700, y: 400, w: 44, h: 30 },
+  { x: 700, y: 434, w: 44, h: 30 },
+  { x: 700, y: 468, w: 44, h: 30 },
+  { x: 748, y: 400, w: 44, h: 30 },
+  { x: 748, y: 434, w: 44, h: 30 },
+  { x: 748, y: 468, w: 44, h: 30 },
+]
+
+const SURVEY_MARKERS = [
+  [112, 140],
+  [420, 300],
+  [772, 430],
+] as const
+
+function HeroNeighborhoodPlan() {
+  return (
+    <div className="pointer-events-none absolute inset-0" style={{ perspective: "1400px" }}>
+      <svg
+        className="absolute inset-0 h-full w-full opacity-70"
+        viewBox="0 0 960 640"
+        preserveAspectRatio="xMidYMid slice"
+        aria-hidden="true"
+        style={{ transform: "rotateX(28deg) scale(1.4)", transformOrigin: "50% 15%" }}
+      >
+        <defs>
+          <pattern id="plan-grid" width="40" height="40" patternUnits="userSpaceOnUse">
+            <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#fff" strokeWidth="0.5" />
+          </pattern>
+        </defs>
+        <rect width="960" height="640" fill="url(#plan-grid)" opacity="0.05" />
+
+        <g stroke="#fff" strokeOpacity="0.14" strokeWidth="1" fill="none">
+          {NEIGHBORHOOD_LOTS.map((l, i) => (
+            <rect
+              key={i}
+              x={l.x}
+              y={l.y}
+              width={l.w}
+              height={l.h}
+              strokeDasharray="3 3"
+              className="animate-march"
+            />
+          ))}
+        </g>
+
+        <ellipse
+          cx="480"
+          cy="330"
+          rx="95"
+          ry="58"
+          fill="none"
+          stroke="var(--color-lime)"
+          strokeOpacity="0.18"
+          strokeDasharray="4 5"
+          className="animate-march"
+        />
+        {[
+          [-30, -10],
+          [10, 15],
+          [35, -18],
+        ].map(([dx, dy], i) => (
+          <circle key={i} cx={480 + dx} cy={330 + dy} r="3" fill="var(--color-lime)" opacity="0.2" />
+        ))}
+
+        <path
+          d="M -20 300 C 140 250, 260 350, 420 300 S 660 210, 980 250"
+          fill="none"
+          stroke="#fff"
+          strokeOpacity="0.22"
+          strokeWidth="2"
+          className="animate-draw-line"
+        />
+        <path
+          d="M 210 305 C 190 240, 165 180, 130 155"
+          fill="none"
+          stroke="#fff"
+          strokeOpacity="0.2"
+          strokeWidth="1.5"
+          className="animate-draw-line"
+        />
+        <circle cx="112" cy="140" r="30" fill="none" stroke="#fff" strokeOpacity="0.18" strokeWidth="1.5" />
+        <path
+          d="M 640 270 C 690 330, 725 370, 755 410"
+          fill="none"
+          stroke="#fff"
+          strokeOpacity="0.2"
+          strokeWidth="1.5"
+          className="animate-draw-line"
+        />
+        <circle cx="772" cy="430" r="28" fill="none" stroke="#fff" strokeOpacity="0.18" strokeWidth="1.5" />
+
+        {SURVEY_MARKERS.map(([mx, my], i) => (
+          <g key={i}>
+            <circle cx={mx} cy={my} r="3" fill="var(--color-lime)" opacity="0.45" />
+            <circle
+              cx={mx}
+              cy={my}
+              r="3"
+              fill="none"
+              stroke="var(--color-lime)"
+              strokeWidth="1"
+              className="animate-marker-pulse"
+            />
+          </g>
+        ))}
+      </svg>
+    </div>
+  )
+}
+
 export default function Home() {
   const [active, setActive] = useState(0)
 
   return (
     <>
       <section className="relative overflow-hidden bg-navy text-white">
-        <div
-          className="pointer-events-none absolute inset-0 opacity-[0.07]"
-          style={{
-            backgroundImage:
-              "linear-gradient(to right, #fff 1px, transparent 1px), linear-gradient(to bottom, #fff 1px, transparent 1px)",
-            backgroundSize: "72px 72px",
-          }}
-        />
-        <div className="pointer-events-none absolute -right-32 -top-32 h-[28rem] w-[28rem] rounded-full bg-lime/15 blur-3xl" />
+        <HeroNeighborhoodPlan />
+        <div className="pointer-events-none absolute -top-24 left-[-15%] h-[26rem] w-[36rem] rounded-full bg-lime/10 blur-[110px] animate-hero-sweep" />
+        <div className="pointer-events-none absolute -bottom-32 right-[-10%] h-[22rem] w-[30rem] rounded-full bg-white/5 blur-[110px] animate-hero-drift" />
 
         <div className="relative mx-auto grid max-w-7xl gap-14 px-5 py-20 md:px-8 md:py-28 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:py-32">
           <div className="min-w-0">
-            <p className="mb-6 inline-flex max-w-full items-center gap-2 rounded-full border border-white/20 bg-white/5 px-4 py-1.5 text-[10px] font-semibold uppercase tracking-[0.14em] text-lime sm:text-[11px] sm:tracking-[0.18em]">
-              Investment and Management and Development
-            </p>
             <h1 className="text-4xl font-semibold leading-[1.08] tracking-tight sm:text-5xl lg:text-[3.75rem]">
               Where Urban Real Estate Meets{" "}
               <span className="text-lime">Purpose and Possibility</span>

@@ -1,17 +1,12 @@
 import { useEffect, useState } from "react"
 import { Link, NavLink, Outlet, useLocation } from "react-router-dom"
 import { CONTACT, LEGAL_DISCLAIMER, NAV } from "../data/site"
-import logoTile from "../assets/logos/logo-tile.png"
+import mogulLogo from "../assets/logos/mogul-logo.webp"
 import { ArrowIcon } from "./ui"
 
 function Wordmark() {
   return (
     <Link to="/" className="flex items-center gap-3">
-      <img
-        src={logoTile}
-        alt=""
-        className="h-11 w-11 rounded-lg object-cover"
-      />
       <span className="text-sm font-semibold leading-tight tracking-tight">
         Elite Urban Realty
         <span className="block text-[11px] font-medium uppercase tracking-[0.18em] text-navy/50">
@@ -240,7 +235,15 @@ function Footer() {
           </p>
           <div className="mt-6 flex flex-col gap-2 text-xs text-navy/50 sm:flex-row sm:items-center sm:justify-between">
             <p>© 2025 EUREALTYPROLLC. All Rights Reserved.</p>
-            <p>Powered By Mogul Design Agency</p>
+            <a
+              href="https://moguldesignagency.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1.5 hover:text-navy/70"
+            >
+              Made with <span aria-hidden="true">♥</span> by
+              <img src={mogulLogo} alt="Mogul Design Agency" className="h-4 w-auto" />
+            </a>
           </div>
         </div>
       </div>
