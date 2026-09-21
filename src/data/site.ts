@@ -3,7 +3,6 @@ import chob from "../assets/logos/chob.png"
 import cityOfDetroit from "../assets/logos/city-of-detroit.png"
 import lionesz from "../assets/logos/lionesz.png"
 import ops from "../assets/logos/ops.png"
-import zerodown from "../assets/logos/zerodown.png"
 import antoinePortrait from "../assets/people/antoine-hayes.jpg"
 import cristinaPortrait from "../assets/people/cristina-pavloff.jpg"
 import moePortrait from "../assets/people/moe-lucas.jpg"
@@ -50,7 +49,6 @@ export const PARTNERS = [
   { name: "Operation Safe Passage", src: ops },
   { name: "Caring Hands of Benjamin", src: chob },
   { name: "AB Pros", src: abPro },
-  { name: "ZeroDown Mortgage", src: zerodown },
 ]
 
 export const TESTIMONIAL_EXCERPTS = [

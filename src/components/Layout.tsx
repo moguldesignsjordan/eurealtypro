@@ -242,7 +242,8 @@ function Footer() {
               className="flex items-center gap-1.5 hover:text-navy/70"
             >
               Made with <span aria-hidden="true">♥</span> by
-              <img src={mogulLogo} alt="Mogul Design Agency" className="h-4 w-auto" />
+              <img src={mogulLogo} alt="" className="h-4 w-auto" />
+              Mogul Design Agency
             </a>
           </div>
         </div>
