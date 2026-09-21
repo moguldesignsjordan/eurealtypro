@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom"
-import antoinePortrait from "../assets/people/antoine-hayes.jpg"
-import detroitTudorHome from "../assets/photos/detroit-tudor-home.jpg"
+import antoinePortrait from "../assets/photos/veterans-village.jpg"
 import { ArrowIcon, Eyebrow, PageHero } from "../components/ui"
 
 const PILLARS = [
@@ -31,16 +30,6 @@ export default function About() {
         }
         lead="At Elite Urban Realty Professionals, we are convinced real estate is more than transactions. It's transformational."
       />
-
-      <section className="mx-auto max-w-7xl px-5 pt-16 md:px-8 md:pt-20">
-        <div className="aspect-[16/9] w-full overflow-hidden rounded-2xl border border-navy/10">
-          <img
-            src={detroitTudorHome}
-            alt="A restored brick tudor-style home in a Detroit neighborhood"
-            className="h-full w-full object-cover"
-          />
-        </div>
-      </section>
 
       <section className="mx-auto max-w-7xl px-5 py-20 md:px-8 md:py-24">
         <p className="max-w-4xl text-lg leading-relaxed text-navy/70">
@@ -80,8 +69,8 @@ export default function About() {
             <div className="mt-8 aspect-[4/5] overflow-hidden rounded-2xl border border-navy/10 bg-shell">
               <img
                 src={antoinePortrait}
-                alt="Antoine M. Hayes I"
-                className="h-full w-full object-cover object-top"
+                alt="Antoine M. Hayes I presenting community development plans"
+                className="h-full w-full object-cover"
               />
             </div>
           </div>
